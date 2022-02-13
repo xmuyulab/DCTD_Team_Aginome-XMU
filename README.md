@@ -2,10 +2,12 @@
 Team Aginome-XMU submissions to DREAM Challenge Tumor Deconvolution
 
 ### Requirements
+```
 python >= 3.6.0
 numpy
 pandas
 scikit-learn
+```
 
 ### Trained models for two sub-challenges
 #### Coarse-grained
