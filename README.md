@@ -40,6 +40,6 @@ python run_DCTD.py fine -In expr.csv -Out ./prediction.csv -scale Linear -model 
 ```
 #### Note
 1. The expression data should be a comma separated file with columns associated to sample ID and rows to genes specified using HUGO symbols.
-2. The coarse-grained and fine-grained models were trained on a gene set that contains 5080 genes. Please check whether these genes exist in your expression profile before performing prediction. If not, we recommend to use DAISM-DNN<sup>XMBD</sup> package to perform deconvolution by training models from scratch.
+2. The coarse-grained and fine-grained models were trained on a gene set that contains 5080 genes. Please check whether these genes exist in your expression profile before performing prediction. If not, we recommend to use DAISM-DNN<sup>XMBD</sup> package (https://github.com/xmuyulab/DAISM-XMBD.git) to perform deconvolution by training models from scratch.
 ### Citation
 Lin Y, Li H, Xiao X, et al. DAISM-DNN<sup>XMBD</sup>: Highly accurate cell type proportion estimation with in silico data augmentation and deep neural networks. Patterns (2022) https://doi.org/10.1016/j.patter.2022.100440
