@@ -13,7 +13,7 @@ parser = argparse.ArgumentParser(description='DCTD_Team Aginome-XMU.')
 subparsers = parser.add_subparsers(dest='subcommand', help='Select one of the following sub-commands')
 
 parser_a = subparsers.add_parser('coarse', help='coarse-grained deconvolution',description="coarse-grained deconvolution")
-parser_a.add_argument("-In", type=str, help="Input expression file (with genes specified using HUGO symbols)", default=None)
+parser_a.add_argument("-In", type=str, help="Input expression file (with genes specified using HUGO symbols)", default="./expr.csv")
 parser_a.add_argument("-Out", type=str, help="Output result file", default="./predicton.csv")
 parser_a.add_argument("-scale", type=str, help="The scale of the expression data (i.e., Log2, Log10, Linear)", default="Linear")
 parser_a.add_argument("-model", type=str, help="Trained models directory", default="./model/")
@@ -22,7 +22,7 @@ parser_a.add_argument("-dataset", type=str, help="name of test dataset", default
 
 
 parser_b = subparsers.add_parser('fine', help='fine-grained deconvolution',description="fine-grained deconvolution")
-parser_b.add_argument("-In", type=str, help="Input expression file (with genes specified using HUGO symbols)", default=None)
+parser_b.add_argument("-In", type=str, help="Input expression file (with genes specified using HUGO symbols)", default="expr.csv")
 parser_b.add_argument("-Out", type=str, help="Output result file", default="./predicton.csv")
 parser_b.add_argument("-scale", type=str, help="The scale of the expression data (i.e., Log2, Log10, Linear)", default="Linear")
 parser_b.add_argument("-model", type=str, help="Trained models directory", default="./model/")
