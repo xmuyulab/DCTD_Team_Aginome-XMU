@@ -34,7 +34,7 @@ cd DCTD_Team_Aginome-XMU
 ```
 python run_DCTD.py coarse -In expr.csv -Out ./prediction.csv -scale Linear -model ./model/ -dataset test
 ```
-    Or you can use following command for fine-grained deconvolution:
+Or you can use following command for fine-grained deconvolution:
 ```
 python run_DCTD.py fine -In expr.csv -Out ./prediction.csv -scale Linear -model ./model/ -dataset test
 ```
