@@ -2,9 +2,11 @@
 Team Aginome-XMU submissions to DREAM Challenge Tumor Deconvolution
 
 ### Installation
-1. Clone the GitHub repo, e.g. with git clone https://github.com/xmuyulab/DCTD_Team_Aginome-XMU.git .
-   
-2. install the following requirements.
+1. Clone the GitHub repo.
+```
+git clone https://github.com/xmuyulab/DCTD_Team_Aginome-XMU.git
+```   
+2. Install the following requirements.
 ```
 python >= 3.6.0
 numpy
@@ -32,7 +34,7 @@ cd DCTD_Team_Aginome-XMU
 ```
 python run_DCTD.py coarse -In expr.csv -Out ./prediction.csv -scale Linear -model ./model/ -dataset test
 ```
-Or you can use following command for fine-grained deconvolution:
+    Or you can use following command for fine-grained deconvolution:
 ```
 python run_DCTD.py fine -In expr.csv -Out ./prediction.csv -scale Linear -model ./model/ -dataset test
 ```

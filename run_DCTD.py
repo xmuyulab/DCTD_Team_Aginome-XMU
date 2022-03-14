@@ -269,3 +269,5 @@ if __name__ == '__main__':
         result = do_MLP_fine(inputArgs.In, inputArgs.scale,inputArgs.model,inputArgs.dataset)
 
     result.to_csv(inputArgs.Out, sep=',', index=False)
+
+    print('Prediction finished!')
