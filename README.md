@@ -25,7 +25,7 @@ cd DCTD_Team_Aginome-XMU
 
     Coarse-grained:
 
-    The Challenge consisted of a “coarse-grained” sub-Challenge, during which participants predicted levels of eight major immune and stromal cell populations [including B cells, CD4+ and CD8+ T cells, NK cells, neutrophils, cells within the monocytic lineage (monocytes/macrophages/dendritic cells), endothelial cells, and fibroblasts].
+    The Challenge consisted of a “coarse-grained” sub-Challenge, during which participants predicted levels of eight major immune and stromal cell populations (including B cells, CD4+ and CD8+ T cells, NK cells, neutrophils, cells within the monocytic lineage (monocytes/macrophages/dendritic cells), endothelial cells, and fibroblasts).
 
     Fine-grained:
 
@@ -94,3 +94,5 @@ The output file ```prediction.csv``` is a comma separated file with 4 columns (c
 The coarse-grained and fine-grained models were trained on a gene set that contains 5080 genes. Please check whether these genes exist in your expression profile before performing prediction. If not, we recommend to use DAISM-DNN<sup>XMBD</sup> package (https://github.com/xmuyulab/DAISM-XMBD.git) to perform deconvolution by training models from scratch.
 ### Citation
 Lin Y, Li H, Xiao X, et al. DAISM-DNN<sup>XMBD</sup>: Highly accurate cell type proportion estimation with in silico data augmentation and deep neural networks. Patterns (2022) https://doi.org/10.1016/j.patter.2022.100440
+
+White, B. S., de Reyniès, A., Newman, A. M., Waterfall, J. J., Lamb, A., Petitprez, F., ... & Gentles, A. J. (2022). Community assessment of methods to deconvolve cellular composition from bulk gene expression. bioRxiv. https://www.biorxiv.org/content/10.1101/2022.06.03.494221.abstract
