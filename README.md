@@ -23,13 +23,14 @@ cd DCTD_Team_Aginome-XMU
 
 4. Download pretrained models from [here](https://doi.org/10.17632/yt79wsksg9.1) and save to ```DCTD_Team_Aginome-XMU``` folder.
 
-Coarse-grained:
+    Coarse-grained:
 
-The Challenge consisted of a “coarse-grained” sub-Challenge, during which participants predicted levels of eight major immune and stromal cell populations [including B cells, CD4+ and CD8+ T cells, NK cells, neutrophils, cells within the monocytic lineage (monocytes/macrophages/dendritic cells), endothelial cells, and fibroblasts].
+    The Challenge consisted of a “coarse-grained” sub-Challenge, during which participants predicted levels of eight major immune and stromal cell populations [including B cells, CD4+ and CD8+ T cells, NK cells, neutrophils, cells within the monocytic lineage (monocytes/macrophages/dendritic cells), endothelial cells, and fibroblasts].
 
-Fine-grained:
+    Fine-grained:
 
-The Challenge also consisted of a “fine-grained” sub-Challenge, during which participants further dissected major populations into 14 minor sub-populations according to their functional orientation (e.g., naive B cells, memory B cells, naive CD4 T cells, memory CD4 T cells, naive.CD8 T cells, memory CD8 T cells, regulatory T cells, monocytes, macrophages, myeloid dendritic cells, NK cells, neutrophils, endothelial cells, and fibroblasts).
+    The Challenge also consisted of a “fine-grained” sub-Challenge, during which participants further dissected major populations into 14 minor sub-populations according to their functional orientation (e.g., naive B cells, memory B cells, naive CD4 T cells, memory CD4 T cells, naive.CD8 T cells, memory CD8 T cells, regulatory T cells, monocytes, macrophages, myeloid dendritic cells, NK cells, neutrophils, endothelial cells, and fibroblasts).
+
 5. Extract tar.gz file.
 ```
 tar -zxvf coarse_models.tar.gz
@@ -38,8 +39,8 @@ tar -zxvf fine_models.tar.gz
 The pretrained models of coarse-grained and fine-grained are saved in sub-folders ```coarse_models``` and ```fine_models``` respectively.
 
 
-**Note:** It takes 10-20 minutes to prepare the environment. Downloading pre-trained models take a long time.
-### Usage on demo
+**Note:** It takes 10-20 minutes to prepare the environment. Downloading pretrained models take a long time.
+### Usage
 ```
 python run_DCTD.py 
 
