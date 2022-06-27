@@ -151,7 +151,7 @@ class MLP_fine2(torch.nn.Module):
 
 def do_MLP_coarse(expression_paths,scale,modelpath,dataset_name):
     exp = pd.read_csv(expression_paths, sep=",", index_col=0)
-    
+    print('Load data!')
     if scale == "Log2":
         exp = pow(2,exp)
 
@@ -164,16 +164,16 @@ def do_MLP_coarse(expression_paths,scale,modelpath,dataset_name):
     exp_data = exp.reindex(sig_genes).values
 
     final_result = np.zeros(shape=(8,exp_data.shape[1]))
-    #modelpath = 'model/'
+    print('Prediction started!')
     for c, celltype in enumerate(celltypes):
         file_list = os.listdir(modelpath+celltype)
         for i,file in enumerate(file_list):
             if c == 0 or c ==4 or c ==5:
-                model1.load_state_dict(torch.load(modelpath+celltype+'/'+file,map_location='cpu'))
+                model1.load_state_dict(torch.load(modelpath+'/'+celltype+'/'+file,map_location='cpu'))
                 model = model1
                 cc = 8
             else:
-                model2.load_state_dict(torch.load(modelpath+celltype+'/'+file,map_location='cpu'))
+                model2.load_state_dict(torch.load(modelpath+'/'+celltype+'/'+file,map_location='cpu'))
                 model = model2 
                 cc =9
                 
@@ -197,7 +197,7 @@ def do_MLP_coarse(expression_paths,scale,modelpath,dataset_name):
 
 def do_MLP_fine(expression_paths,scale,modelpath,dataset_name):
     exp = pd.read_csv(expression_paths, sep=",", index_col=0)
-    
+    print('Load data!')
     if scale == "Log2":
         exp = pow(2,exp)
 
@@ -210,14 +210,16 @@ def do_MLP_fine(expression_paths,scale,modelpath,dataset_name):
     exp_data = exp.reindex(sig_genes).values
 
     final_result = np.zeros(shape=(14,exp_data.shape[1]))
+
+    print('Prediction started!')
     for c, celltype in enumerate(celltypes):
         file_list = os.listdir(modelpath+celltype)
         for i,file in enumerate(file_list):
             if c == 4 or c ==5 or c ==6 or c ==7:
-                model1.load_state_dict(torch.load(modelpath+celltype+'/'+file,map_location='cpu'))
+                model1.load_state_dict(torch.load(modelpath+"/"+celltype+'/'+file,map_location='cpu'))
                 model = model1 
             else:
-                model2.load_state_dict(torch.load(modelpath+celltype+'/'+file,map_location='cpu'))
+                model2.load_state_dict(torch.load(modelpath+"/"+celltype+'/'+file,map_location='cpu'))
                 model = model2 
                 
             out = MCpred(model=model,data=exp_data)
@@ -238,14 +240,12 @@ def do_MLP_fine(expression_paths,scale,modelpath,dataset_name):
     
     return result
 
-
+    
 
 if __name__ == '__main__':
 
     inputArgs = parser.parse_args()
-    expr = inputArgs.In
     
-
     sig_genes = pd.read_csv('validation_features_5080.txt',sep="\t",index_col=0)
     sig_genes= list(sig_genes['feature_left'])
     sig_genes.sort()
@@ -271,3 +271,4 @@ if __name__ == '__main__':
     result.to_csv(inputArgs.Out, sep=',', index=False)
 
     print('Prediction finished!')
+    
