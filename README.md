@@ -39,7 +39,7 @@ tar -zxvf fine_models.tar.gz
 The pretrained models of coarse-grained and fine-grained are saved in sub-folders ```coarse_models``` and ```fine_models``` respectively.
 
 
-**Note:** It takes 10-20 minutes to prepare the environment. Downloading pretrained models take a long time.
+**Note:** It takes 20-30 minutes to prepare the environment. Downloading pretrained models take a long time.
 ### Usage
 ```
 python run_DCTD.py 
@@ -74,7 +74,7 @@ Use the following command for coarse-grained deconvolution:
    Or you can use following command for fine-grained deconvolution:
 
    ```
-   python run_DCTD.py fine -In demo_data.csv -Out ./prediction.csv -scale Linear -model ./fine_model/ -dataset demo_data
+   python run_DCTD.py fine -In demo_data.csv -Out ./prediction.csv -scale Linear -model ./fine_models/ -dataset demo_data
    ```
 
    **Note:** It takes only a few seconds to perform cell type proportion prediction.
